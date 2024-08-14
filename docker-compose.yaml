@@ -37,8 +37,6 @@ services:
     environment:
       - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${DATABASE_HOST}/${POSTGRES_DB}
       - DATABASE_DIRECT_URL=${DATABASE_URL}
-    depends_on:
-      - database
 
 # Optional use of Prisma Studio. In production, comment out or remove the section below to prevent unwanted access to your database.
 #  studio:
