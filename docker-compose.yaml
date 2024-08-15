@@ -5,6 +5,7 @@ volumes:
   database-data:
 
 networks:
+  build_network:  
   stack2:
     name: stack2
     external: false
