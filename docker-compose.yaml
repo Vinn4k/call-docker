@@ -5,8 +5,8 @@ volumes:
   database-data:
 
 networks:
-  stack:
-    name: stack
+  stack2:
+    name: stack2
     external: false
   network_public:
     name: network_public
@@ -21,7 +21,7 @@ services:
       - database-data:/var/lib/postgresql/data/
     env_file: .env
     networks:
-      - stack
+      - stack2
 
   calcom:
     image: calcom.docker.scarf.sh/calcom/cal.com
@@ -40,7 +40,7 @@ services:
       network: stack
     restart: always
     networks:
-      - stack
+      - stack2
       - network_public
     ports:
       - 3000:3000
