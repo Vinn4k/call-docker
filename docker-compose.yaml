@@ -8,6 +8,8 @@ networks:
   stack:
     name: stack
     external: false
+  network_public:
+    external: true
 
 services:
   database:
