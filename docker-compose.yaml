@@ -7,6 +7,8 @@ networks:
   network_public:
     name: network_public
     external: true
+ postgres_db_network:
+   external: true
 
 services:
   calcom:
@@ -20,6 +22,7 @@ services:
     restart: always
     networks:
       - network_public
+      - postgres_db_network
     ports:
       - "3000:3000"
     env_file: .env
