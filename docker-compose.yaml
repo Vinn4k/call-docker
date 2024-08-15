@@ -7,7 +7,7 @@ networks:
   network_public:
     name: network_public
     external: true
- postgres_db_network:
+  postgres_db_network:
    external: true
 
 services:
